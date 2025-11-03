@@ -3,8 +3,8 @@ import React, { useEffect } from 'react';
 /**
  * PUBLIC_INTERFACE
  * SignIn11235 - Pixel-perfect Sign In screen (11:235) rendered in React.
- * - Imports CSS from public/assets to preserve exact measurements and z-index.
- * - Uses image paths under /assets/figmaimages/... that are already available in public.
+ * - Injects CSS from public/assets at runtime to preserve exact measurements and avoid CRA "outside src" import issues.
+ * - Uses image paths under /assets/figmaimages/... that are served from public/assets.
  * - Ports minimal interaction from sign-in-11-235.js (pressed state and click hook) into React.
  */
 export default function SignIn11235() {
