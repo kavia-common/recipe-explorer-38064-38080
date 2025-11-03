@@ -1,3 +1,4 @@
+/* Screen: Sign In (11:235) */
 @import url("./common.css");
 
 #screen-sign-in-11-235 {
@@ -8,44 +9,51 @@
   background-color: var(--color-ffffff);
 }
 
+/* Root container gets style_10 background radius (if visually needed) */
 #root-11-235 {
   position: absolute;
-  left: 0px;
-  top: 0px;
+  left: 0px; /* root.x - screen.x = 426 - 426 */
+  top: 0px;  /* root.y - screen.y = -430 - (-430) */
   width: 375px;
   height: 812px;
 }
 
+/* Title Group (13:110): parent is root (426,-430) */
 #grp-13-110 {
   position: absolute;
-  left: 30px;
-  top: 94px;
+  left: 30px;  /* 456 - 426 */
+  top: 94px;   /* -336 - (-430) */
   width: 155px;
   height: 75px;
 }
 
+/* Text Hello, (12:29) within root; but we place absolutely relative to root */
 #txt-12-29 {
   position: absolute;
-  left: 30px;
-  top: 94px;
+  left: 30px;  /* 456 - 426 */
+  top: 94px;   /* -336 - (-430) */
   width: 84px;
   height: 45px;
 }
-#txt-12-29 span { display: block; }
+#txt-12-29 span {
+  display: block;
+}
 
+/* Text Welcome Back! (12:30) */
 #txt-12-30 {
   position: absolute;
-  left: 30px;
-  top: 139px;
+  left: 30px;  /* 456 - 426 */
+  top: 139px;  /* -291 - (-430) */
   width: 155px;
   height: 30px;
 }
 #txt-12-30 span { display: block; }
 
+/* Forgot Password group (12:91) */
 #grp-12-91 {
   position: absolute;
-  left: 40px;
-  top: 438px;
+  left: 40px;   /* 466 - 426 */
+  top: 438px;   /* 8 - (-430) */
   width: 97px;
   height: 17px;
 }
@@ -58,13 +66,15 @@
 }
 #txt-12-94 span { display: block; }
 
+/* Google Button wrapper (13:35) */
 #btn-13-35 {
   position: absolute;
-  left: 131px;
-  top: 597px;
+  left: 131px;  /* 557 - 426 */
+  top: 597px;   /* 167 - (-430) */
   width: 44px;
   height: 44px;
 }
+/* Google button rectangle (13:36) */
 #rect-13-36 {
   position: absolute;
   left: 131px;
@@ -76,46 +86,49 @@
   box-shadow: var(--shadow-1);
 }
 
+/* Google component frame (13:48) */
 #comp-13-48 {
   position: absolute;
-  left: 141px;
-  top: 607px;
+  left: 141px; /* 567 - 426 */
+  top: 607px;  /* 177 - (-430) */
   width: 24px;
   height: 24px;
 }
+/* google vectors (13:39,13:40,13:41,13:42) positioned relative to root */
 #icon-13-39 {
   position: absolute;
-  left: 143px;
-  top: 609px;
+  left: 143px; /* 569 - 426 */
+  top: 609px;  /* 179 - (-430) */
   width: 20px;
   height: 20px;
 }
 #icon-13-40 {
   position: absolute;
-  left: 144.153px;
-  top: 609px;
+  left: 144.153px; /* 570.1530 - 426 */
+  top: 609px;      /* 179 - (-430) */
   width: 15.656px;
   height: 7.755px;
 }
 #icon-13-41 {
   position: absolute;
-  left: 144.097px;
-  top: 621.027px;
+  left: 144.097px; /* 570.0975 - 426 */
+  top: 621.027px;  /* 191.027 - (-430) */
   width: 15.607px;
   height: 7.973px;
 }
 #icon-13-42 {
   position: absolute;
-  left: 153px;
-  top: 617px;
+  left: 153px;    /* 579 - 426 */
+  top: 617px;     /* 187 - (-430) */
   width: 10px;
   height: 9.414px;
 }
 
+/* Facebook Button (13:49) */
 #btn-13-49 {
   position: absolute;
-  left: 200px;
-  top: 597px;
+  left: 200px; /* 626 - 426 */
+  top: 597px;  /* 167 - (-430) */
   width: 44px;
   height: 44px;
 }
@@ -129,13 +142,15 @@
   border-radius: 10px;
   box-shadow: var(--shadow-1);
 }
+/* facebook group (13:58) */
 #grp-13-58 {
   position: absolute;
-  left: 210px;
-  top: 607px;
+  left: 210px; /* 636-426 */
+  top: 607px;  /* 177-(-430) */
   width: 24px;
   height: 24px;
 }
+/* BG 111 (13:60) is backdrop color with opacity, we simulate with a 24x24 transparent layer */
 #icon-13-60 {
   position: absolute;
   left: 210px;
@@ -145,13 +160,15 @@
   opacity: 0.58;
   background: transparent;
 }
+/* Facebook Vector (13:61) */
 #icon-13-61 {
   position: absolute;
-  left: 212px;
-  top: 609px;
+  left: 212px; /* 638-426 */
+  top: 609px;  /* 179-(-430) */
   width: 20px;
   height: 20px;
 }
+/* overlay invisible (13:62) */
 #icon-13-62 {
   position: absolute;
   left: 210px;
@@ -161,58 +178,64 @@
   opacity: 0;
 }
 
+/* Don't have account text (13:67) */
 #txt-13-67 {
   position: absolute;
-  left: 99px;
-  top: 696px;
+  left: 99px; /* 525-426 */
+  top: 696px; /* 266-(-430) */
   width: 177px;
   height: 17px;
 }
 #txt-13-67 span { display: block; }
 
+/* OR line group (12:139) */
 #grp-12-139 {
   position: absolute;
-  left: 90px;
-  top: 560px;
+  left: 90px;  /* 516-426 */
+  top: 560px;  /* 130-(-430) */
   width: 195px;
   height: 17px;
 }
+/* Right line (12:141) */
 #line-12-141 {
   position: absolute;
-  left: 235px;
-  top: 569px;
+  left: 235px; /* 661-426 */
+  top: 569px;  /* 139-(-430) */
   width: 50px;
   height: 0px;
   border-top: 1px solid var(--color-d9d9d9);
 }
+/* Left line (12:140) */
 #line-12-140 {
   position: absolute;
-  left: 90px;
-  top: 569px;
+  left: 90px; /* 516-426 */
+  top: 569px; /* 139-(-430) */
   width: 50px;
   height: 0px;
   border-top: 1px solid var(--color-d9d9d9);
 }
+/* Or Sign in With (12:142) */
 #txt-12-142 {
   position: absolute;
-  left: 147px;
-  top: 560px;
+  left: 147px; /* 573-426 */
+  top: 560px;  /* 130-(-430) */
   width: 81px;
   height: 17px;
 }
 #txt-12-142 span { display: block; }
 
+/* Input field 1 (Email) (30:585) */
 #comp-30-585 {
   position: absolute;
-  left: 30px;
-  top: 226px;
+  left: 30px;  /* 456-426 */
+  top: 226px;  /* -204 - (-430) */
   width: 315px;
   height: 81px;
 }
 #rect-30-585-298 {
   position: absolute;
-  left: 30px;
-  top: 252px;
+  left: 30px;   /* 456-426 */
+  top: 252px;   /* -178 - (-430) */
   width: 315px;
   height: 55px;
   border: 1.5px solid var(--color-d9d9d9);
@@ -221,32 +244,33 @@
 }
 #txt-30-585-300 {
   position: absolute;
-  left: 50px;
-  top: 271px;
+  left: 50px;   /* 476-426 */
+  top: 271px;   /* -159 - (-430) */
   width: 61px;
   height: 17px;
 }
 #txt-30-585-300 span { display: block; }
 #txt-30-585-301 {
   position: absolute;
-  left: 30px;
-  top: 226px;
+  left: 30px;   /* 456-426 */
+  top: 226px;   /* -204 - (-430) */
   width: 38px;
   height: 21px;
 }
 #txt-30-585-301 span { display: block; }
 
+/* Input field 2 (Password) (30:590) */
 #comp-30-590 {
   position: absolute;
-  left: 30px;
-  top: 337px;
+  left: 30px;  /* 456-426 */
+  top: 337px;  /* -93 - (-430) */
   width: 315px;
   height: 81px;
 }
 #rect-30-590-298 {
   position: absolute;
-  left: 30px;
-  top: 363px;
+  left: 30px;  /* 456-426 */
+  top: 363px;  /* -67 - (-430) */
   width: 315px;
   height: 55px;
   border: 1.5px solid var(--color-d9d9d9);
@@ -255,42 +279,44 @@
 }
 #txt-30-590-300 {
   position: absolute;
-  left: 50px;
-  top: 382px;
+  left: 50px;  /* 476-426 */
+  top: 382px;  /* -48 - (-430) */
   width: 84px;
   height: 17px;
 }
 #txt-30-590-300 span { display: block; }
 #txt-30-590-301 {
   position: absolute;
-  left: 30px;
-  top: 337px;
+  left: 30px;  /* 456-426 */
+  top: 337px;  /* -93 - (-430) */
   width: 107px;
   height: 21px;
 }
 #txt-30-590-301 span { display: block; }
 
+/* Home Indicator (42:614) */
 #comp-42-614 {
   position: absolute;
-  left: 0px;
-  top: 778px;
+  left: 0px;     /* 426 - 426 */
+  top: 778px;    /* 348 - (-430) */
   width: 375px;
   height: 34px;
 }
 #rect-42-614-603 {
   position: absolute;
-  left: 120px;
-  top: 799px;
+  left: 120px; /* 546-426 */
+  top: 799px;  /* 369-(-430) */
   width: 135px;
   height: 5px;
   background-color: var(--color-121212);
   border-radius: 100px;
 }
 
+/* Big Button (54:668) */
 #btn-54-668 {
   position: absolute;
-  left: 30px;
-  top: 480px;
+  left: 30px;  /* 456-426 */
+  top: 480px;  /* 50 - (-430) */
   width: 315px;
   height: 60px;
   background-color: var(--color-129575);
@@ -298,20 +324,22 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
+  justify-content: center; /* As label centered visually in design */
 }
+/* label (I54:668;53:624) */
 #txt-54-668-624 {
   position: absolute;
-  left: 115px;
-  top: 498px;
+  left: 115px; /* 541-426 */
+  top: 498px;  /* 68 - (-430) */
   width: 114px;
   height: 24px;
 }
 #txt-54-668-624 span { display: block; }
+/* Arrow icon container (I54:668;53:625) */
 #comp-54-668-625 {
   position: absolute;
-  left: 240px;
-  top: 500px;
+  left: 240px; /* 666-426 */
+  top: 500px;  /* 70 - (-430) */
   width: 20px;
   height: 20px;
 }
@@ -321,61 +349,66 @@
   top: 500px;
   width: 20px;
   height: 20px;
-  background-color: transparent;
+  background-color: transparent; /* style_12 opacity 0 */
 }
 #grp-54-668-625-3257 {
   position: absolute;
-  left: 243.333px;
-  top: 504.167px;
+  left: 243.333px; /* 669.3333-426 */
+  top: 504.167px;  /* 74.1665 - (-430) */
   width: 13.333px;
   height: 11.667px;
 }
 #icon-54-668-625-3258 {
   position: absolute;
-  left: 243.333px;
-  top: 509.354px;
+  left: 243.333px; /* 669.3333-426 */
+  top: 509.354px;  /* 79.3541-(-430) */
   width: 13.333px;
   height: 1.292px;
   background-color: var(--color-000000);
 }
 #icon-54-668-625-3259 {
   position: absolute;
-  left: 250.566px;
-  top: 504.167px;
+  left: 250.566px; /* 676.56555-426 */
+  top: 504.167px;  /* 74.1665-(-430) */
   width: 6.101px;
   height: 11.667px;
   background-color: var(--color-000000);
 }
 
+/* Status Bar (13:71) */
 #comp-13-71 {
   position: absolute;
-  left: 0px;
-  top: 0px;
+  left: 0px;    /* 426-426 */
+  top: 0px;     /* -430-(-430) */
   width: 375px;
   height: 44px;
 }
+/* Symbols frame (I13:71;128:302) */
 #frm-13-71-302 {
   position: absolute;
-  left: 293.5px;
-  top: 16.6px;
+  left: 293.5px; /* 719.5 - 426 */
+  top: 16.6px;   /* -413.4 - (-430) */
   width: 68px;
   height: 13px;
 }
+/* Battery group (I13:71;128:303) */
 #grp-13-71-303 {
   position: absolute;
-  left: 336px;
-  top: 17.16px;
+  left: 336px;  /* 762 - 426 */
+  top: 17.16px; /* -412.84 - (-430) */
   width: 24.5px;
   height: 11.5px;
 }
+/* Battery rectangle boolean (I13:71;128:304) - container */
 #grp-13-71-304 {
   position: absolute;
   left: 336px;
   top: 17.16px;
   width: 24.5px;
   height: 11.5px;
-  opacity: 0.4;
+  opacity: 0.4; /* style_33 */
 }
+/* Exclude (I13:71;128:305) */
 #grp-13-71-305 {
   position: absolute;
   left: 336px;
@@ -384,34 +417,36 @@
   height: 11.5px;
   background-color: var(--color-dadada);
 }
+/* Battery inner paths */
 #icon-13-71-306 {
   position: absolute;
-  left: 337px;
-  top: 18.16px;
+  left: 337px; /* 763-426 */
+  top: 18.16px; /* -411.84-(-430) */
   width: 20px;
   height: 9.5px;
   background-color: var(--color-000000);
 }
 #icon-13-71-307 {
   position: absolute;
-  left: 336px;
-  top: 17.16px;
+  left: 336px; /* 762-426 */
+  top: 17.16px; /* -412.84-(-430) */
   width: 22px;
   height: 11.5px;
   background-color: var(--color-000000);
 }
 #rect-13-71-308 {
   position: absolute;
-  left: 359px;
-  top: 20.85px;
+  left: 359px;  /* 785-426 */
+  top: 20.85px; /* -409.15-(-430) */
   width: 1.5px;
   height: 4px;
   background-color: var(--color-000000);
 }
+/* Charging fill rectangle (I13:71;128:309) */
 #rect-13-71-309 {
   position: absolute;
-  left: 338px;
-  top: 19.077px;
+  left: 338px; /* 764-426 */
+  top: 19.077px; /* -410.92334-(-430) */
   width: 18px;
   height: 7.667px;
   opacity: 1;
@@ -419,18 +454,19 @@
   border-radius: 1.6px;
 }
 
+/* Combined shape (cell bars) */
 #grp-13-71-310 {
   position: absolute;
-  left: 293.5px;
-  top: 17.6px;
+  left: 293.5px; /* 719.5-426 */
+  top: 17.6px;   /* -412.4-(-430) */
   width: 17.1px;
   height: 10.7px;
   background-color: var(--color-303030);
 }
 #rect-13-71-311 {
   position: absolute;
-  left: 293.5px;
-  top: 24.3px;
+  left: 293.5px; /* 719.5-426 */
+  top: 24.3px;   /* -405.7-(-430) */
   width: 3px;
   height: 4px;
   background-color: var(--color-000000);
@@ -438,8 +474,8 @@
 }
 #rect-13-71-312 {
   position: absolute;
-  left: 298.3px;
-  top: 22.3px;
+  left: 298.3px; /* 724.3-426 */
+  top: 22.3px;   /* -407.7-(-430) */
   width: 3px;
   height: 6px;
   background-color: var(--color-000000);
@@ -447,8 +483,8 @@
 }
 #rect-13-71-313 {
   position: absolute;
-  left: 302.9px;
-  top: 20px;
+  left: 302.9px; /* 728.9-426 */
+  top: 20px;     /* -410.0-(-430) */
   width: 3px;
   height: 8.3px;
   background-color: var(--color-000000);
@@ -456,18 +492,19 @@
 }
 #rect-13-71-314 {
   position: absolute;
-  left: 307.6px;
-  top: 17.6px;
+  left: 307.6px; /* 733.6-426 */
+  top: 17.6px;   /* -412.4-(-430) */
   width: 3px;
   height: 10.7px;
   background-color: var(--color-000000);
   border-radius: 1.2px;
 }
 
+/* Wi-Fi (I13:71;128:315) approximate shape using 3 bars as black */
 #grp-13-71-315 {
   position: absolute;
-  left: 315.6px;
-  top: 17.4px;
+  left: 315.6px; /* 741.6-426 */
+  top: 17.4px;   /* -412.6-(-430) */
   width: 15.4px;
   height: 11.057px;
 }
@@ -478,33 +515,36 @@
   background-color: var(--color-000000);
 }
 #icon-13-71-316 {
-  left: 315.6px;
-  top: 17.4px;
+  left: 315.6px; /* 741.6-426 */
+  top: 17.4px;   /* -412.6-(-430) */
   width: 15.4px; height: 4.783px;
 }
 #icon-13-71-317 {
-  left: 318.286px;
-  top: 21.226px;
+  left: 318.286px; /* 744.2855-426 */
+  top: 21.226px;   /* -408.77426-(-430) */
   width: 10.032px; height: 3.664px;
 }
 #icon-13-71-318 {
-  left: 320.968px;
-  top: 25.055px;
+  left: 320.968px; /* 746.9678-426 */
+  top: 25.055px;   /* -404.9454-(-430) */
   width: 4.665px; height: 3.403px;
 }
 
+/* Time container (I13:71;128:319) */
 #frm-13-71-319 {
   position: absolute;
-  left: 0px;
-  top: 12px;
+  left: 0px;   /* 426-426 */
+  top: 12px;   /* -418-(-430) */
   width: 180px;
   height: 22px;
 }
 #txt-13-71-320 {
   position: absolute;
-  left: 29.5px;
-  top: 14px;
+  left: 29.5px; /* 455.5-426 */
+  top: 14px;    /* -416-(-430) */
   width: 37px;
   height: 18px;
 }
-#txt-13-71-320 span { display: block; }
+#txt-13-71-320 span {
+  display: block;
+}

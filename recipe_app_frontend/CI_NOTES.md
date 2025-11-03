@@ -4,8 +4,8 @@ This project uses Create React App (CRA) and includes routing for a Sign In scre
 
 What to run in CI to avoid exit code 137 (OOM):
 - Use static serving instead of the webpack dev server.
-- Recommended: `npm run start:ci` (runs a production build and serves it via `serve` on `0.0.0.0:${REACT_APP_PORT:-3000}`).
-- Alternative: `npm run build && npm run serve`.
+- REQUIRED for CI: `npm run start:ci` (runs a production build and serves it via `serve` on `0.0.0.0:${REACT_APP_PORT:-3000}`).
+- Alternative (equivalent): `npm run build && npm run serve`.
 
 Why:
 - The webpack dev server can consume more memory and is sometimes OOM-killed in constrained CI environments (exit 137).
@@ -33,7 +33,7 @@ Tests:
 Notes and known warnings:
 - Do not import files from outside `src` in React modules. Reference assets via `/assets/...` from `public/assets`, or keep imports within `src`.
 - Webpack dev server deprecation notices (e.g., `onBeforeSetupMiddleware` / `onAfterSetupMiddleware`) are benign under CRA v5.
-- Browserslist DB updates run on `prepare`/`postinstall` automatically.
+- Browserslist DB updates run on `prepare`/`postinstall` automatically and are non-blocking.
 
 Quick commands:
 - Start dev server (local dev): `npm start`

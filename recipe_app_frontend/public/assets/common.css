@@ -1,4 +1,5 @@
 :root {
+  /* Colors from design_system.colors (hex entries only converted to CSS vars) */
   --color-ffffff: #ffffff;
   --color-292929: #292929;
   --color-000000: #000000;
@@ -45,6 +46,8 @@
   --color-9747ff: #9747ff;
   --color-828282: #828282;
 
+  /* Typography variables derived from design_system.typography for used refs */
+  /* typo_60 */
   --typo-60-family: 'Poppins', sans-serif;
   --typo-60-size: 30px;
   --typo-60-weight: 600;
@@ -53,6 +56,7 @@
   --typo-60-align: left;
   --typo-60-color: var(--color-000000);
 
+  /* typo_61 */
   --typo-61-family: 'Poppins', sans-serif;
   --typo-61-size: 20px;
   --typo-61-weight: 400;
@@ -61,6 +65,7 @@
   --typo-61-align: left;
   --typo-61-color: var(--color-121212);
 
+  /* typo_62 */
   --typo-62-family: 'Poppins', sans-serif;
   --typo-62-size: 11px;
   --typo-62-weight: 400;
@@ -69,6 +74,7 @@
   --typo-62-align: center;
   --typo-62-color: var(--color-ff9c00);
 
+  /* typo_63 */
   --typo-63-family: 'Poppins', sans-serif;
   --typo-63-size: 11px;
   --typo-63-weight: 500;
@@ -77,6 +83,7 @@
   --typo-63-align: left;
   --typo-63-color: var(--color-000000);
 
+  /* typo_64 */
   --typo-64-family: 'Poppins', sans-serif;
   --typo-64-size: 11px;
   --typo-64-weight: 500;
@@ -85,6 +92,7 @@
   --typo-64-align: left;
   --typo-64-color: var(--color-d9d9d9);
 
+  /* typo_65 */
   --typo-65-family: 'Poppins', sans-serif;
   --typo-65-size: 11px;
   --typo-65-weight: 400;
@@ -93,6 +101,7 @@
   --typo-65-align: left;
   --typo-65-color: var(--color-d9d9d9);
 
+  /* typo_66 */
   --typo-66-family: 'Poppins', sans-serif;
   --typo-66-size: 14px;
   --typo-66-weight: 400;
@@ -101,6 +110,7 @@
   --typo-66-align: left;
   --typo-66-color: var(--color-121212);
 
+  /* typo_67 */
   --typo-67-family: 'SF Pro Display', sans-serif;
   --typo-67-size: 15px;
   --typo-67-weight: 500;
@@ -109,6 +119,7 @@
   --typo-67-align: left;
   --typo-67-color: var(--color-303030);
 
+  /* typo_58 */
   --typo-58-family: 'Poppins', sans-serif;
   --typo-58-size: 16px;
   --typo-58-weight: 600;
@@ -117,12 +128,14 @@
   --typo-58-align: center;
   --typo-58-color: var(--color-ffffff);
 
+  /* Spacing tokens (common set) */
   --spacing-xs: 4px;
   --spacing-sm: 8px;
   --spacing-md: 16px;
   --spacing-lg: 24px;
   --spacing-xl: 32px;
 
+  /* Shadows derived from design_system.shadows mapped to variables */
   --shadow-0: 0 0 5px 3px #696969;
   --shadow-1: 0 8px 25px 0 #202020;
   --shadow-2: 0 0 8px 0 #6c6c6c;
@@ -136,9 +149,12 @@
   --shadow-10: 0 0 30px 0 #000000;
 }
 
+/* Common reset and sizing */
 *,
 *::before,
-*::after { box-sizing: border-box; }
+*::after {
+  box-sizing: border-box;
+}
 
 html, body {
   margin: 0;
@@ -146,12 +162,26 @@ html, body {
   background: var(--color-ffffff);
 }
 
-.figma-screen { position: relative; overflow: hidden; }
+.figma-screen {
+  position: relative;
+  overflow: hidden;
+}
 
-.style-10 { background-color: var(--color-ffffff); border-radius: 30px; }
-.style-3 { background-color: var(--color-000000); }
-.style-18 { background-color: var(--color-121212); }
-.style-19 { background-color: var(--color-ff9c00); }
+/* Utility classes for style references used on this screen (subset) */
+/* style_10: background white, border_radius 30 */
+.style-10 {
+  background-color: var(--color-ffffff);
+  border-radius: 30px;
+}
+.style-3 {
+  background-color: var(--color-000000);
+}
+.style-18 {
+  background-color: var(--color-121212);
+}
+.style-19 {
+  background-color: var(--color-ff9c00);
+}
 .style-21 { background-color: var(--color-ffc107); }
 .style-22 { background-color: var(--color-ff3d00); }
 .style-23 { background-color: var(--color-4caf50); }
@@ -159,6 +189,7 @@ html, body {
 .style-25 { opacity: 0.58; }
 .style-26 { background-color: var(--color-035b81); }
 .style-27 { opacity: 0; }
+/* style_28: border 1px solid d9d9d9 */
 .style-28 { background-color: var(--color-d9d9d9); border: 1px solid var(--color-d9d9d9); }
 .style-29 { background-color: var(--color-d9d9d9); }
 .style-30 { border: 1.5px solid var(--color-d9d9d9); border-radius: 10px; }
@@ -169,6 +200,7 @@ html, body {
 .style-11 { background-color: var(--color-129575); border-radius: 10px; }
 .style-12 { background-color: var(--color-ffffff); opacity: 0; }
 
+/* Text helpers for typography refs used */
 .typo-60 { font-family: var(--typo-60-family); font-size: var(--typo-60-size); font-weight: var(--typo-60-weight); line-height: var(--typo-60-line-height); letter-spacing: var(--typo-60-letter-spacing); text-align: var(--typo-60-align); color: var(--typo-60-color); }
 .typo-61 { font-family: var(--typo-61-family); font-size: var(--typo-61-size); font-weight: var(--typo-61-weight); line-height: var(--typo-61-line-height); letter-spacing: var(--typo-61-letter-spacing); text-align: var(--typo-61-align); color: var(--typo-61-color); }
 .typo-62 { font-family: var(--typo-62-family); font-size: var(--typo-62-size); font-weight: var(--typo-62-weight); line-height: var(--typo-62-line-height); letter-spacing: var(--typo-62-letter-spacing); text-align: var(--typo-62-align); color: var(--typo-62-color); }
