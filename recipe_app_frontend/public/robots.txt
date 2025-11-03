@@ -1,2 +1,4 @@
+# PUBLIC_INTERFACE
+# Allow all by default.
 User-agent: *
 Disallow:
