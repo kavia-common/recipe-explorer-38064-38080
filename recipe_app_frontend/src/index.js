@@ -1,5 +1,8 @@
 /**
+ * PUBLIC_INTERFACE
  * Entry point that mounts the React application to #root in public/index.html
+ * - Wraps App with BrowserRouter for client-side routing.
+ * - Loads global index.css.
  */
 import React from 'react';
 import ReactDOM from 'react-dom/client';

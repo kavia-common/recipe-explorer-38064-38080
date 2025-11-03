@@ -11,8 +11,8 @@
     "serve": "^14.2.3"
   },
   "scripts": {
-    "start": "cross-env PORT=${REACT_APP_PORT:-3000} BROWSER=none react-scripts start",
-    "start:ci": "cross-env CI=true PORT=${REACT_APP_PORT:-3000} BROWSER=none react-scripts start",
+    "start": "cross-env HOST=0.0.0.0 PORT=${REACT_APP_PORT:-3000} BROWSER=none react-scripts start",
+    "start:ci": "cross-env CI=true HOST=0.0.0.0 PORT=${REACT_APP_PORT:-3000} BROWSER=none react-scripts start",
     "build": "cross-env CI=true react-scripts build",
     "serve": "serve -s build -l ${REACT_APP_PORT:-3000}",
     "test": "cross-env CI=true react-scripts test --watchAll=false",
