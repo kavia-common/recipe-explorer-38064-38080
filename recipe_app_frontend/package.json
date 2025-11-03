@@ -2,16 +2,21 @@
   "name": "react-kavia",
   "version": "0.1.0",
   "private": true,
+  "homepage": ".",
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-scripts": "^5.0.1"
+    "react-scripts": "^5.0.1",
+    "serve": "^14.2.3"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "start": "cross-env PORT=${REACT_APP_PORT:-3000} BROWSER=none react-scripts start",
+    "start:ci": "cross-env CI=true PORT=${REACT_APP_PORT:-3000} BROWSER=none react-scripts start",
+    "build": "cross-env CI=true react-scripts build",
+    "serve": "serve -s build -l ${REACT_APP_PORT:-3000}",
+    "test": "cross-env CI=true react-scripts test --watchAll=false",
+    "eject": "react-scripts eject",
+    "prepare": "npx --yes update-browserslist-db@latest || true"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -30,5 +35,8 @@
   },
   "devDependencies": {
     "cross-env": "^7.0.3"
+  },
+  "engines": {
+    "node": ">=16"
   }
 }
