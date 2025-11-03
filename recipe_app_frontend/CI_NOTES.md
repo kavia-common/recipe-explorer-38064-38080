@@ -5,7 +5,9 @@
   - HOST=0.0.0.0
   - PORT from REACT_APP_PORT (defaults to 3000)
   - BROWSER=none
-- In CI, use `npm run start:ci` or `npm run build` then `npm run serve` for a static serve.
+- In CI, use `npm run start:ci` which performs a production build then serves statically (non-interactive). This avoids long-running dev server processes being force-killed (exit 137).
+- Alternatively, run `npm run build` then `npm run serve`.
+- If a simple liveness check is needed without assets, `npm run healthcheck` exposes a minimal HTTP server on REACT_APP_PORT (default 3000) and responds with "ok".
 - The Sign In screen loads assets from `/assets/...`, which are placed under `public/assets`. Ensure any future extracted assets are copied into `public/assets` (not imported from outside src).
 - Environment variables used by scripts:
   - REACT_APP_PORT (optional)
