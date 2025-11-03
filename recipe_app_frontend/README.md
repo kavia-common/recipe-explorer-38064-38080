@@ -19,7 +19,7 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 ### `npm run start:ci`
 Runs a production build and serves it statically on `0.0.0.0:${REACT_APP_PORT:-3000}`.\
-Use this in CI to avoid OOM (exit code 137).
+Use this in CI to avoid OOM (exit code 137). In CI environments, prefer `npm run start:ci` or `npm run start:static` instead of `npm start` (webpack dev server).
 
 ### `npm test`
 Launches the test runner in non-watch CI mode.
