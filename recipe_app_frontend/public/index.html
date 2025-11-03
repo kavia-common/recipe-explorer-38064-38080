@@ -1,24 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- PUBLIC_INTERFACE -->
     <!--
-      CRA entry HTML. Provides #root mount point.
-      - Includes viewport meta and basic title.
-      - Provides link to favicon and manifest for CRA conventions.
-      - Note: Design assets are served from /assets (copied into public/assets).
+      PUBLIC_INTERFACE
+      index.html - CRA public template.
+      Provides the #root element used by src/index.js and basic metadata.
+      Assets under public/assets are served statically and referenced as /assets/...
     -->
     <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#2563EB" />
-    <meta
-      name="description"
-      content="Recipe Explorer frontend"
-    />
     <title>Recipe Explorer</title>
-    <!-- Optional: preload a common stylesheet for Sign In if route is hit later via React -->
-    <!-- We inject per-route CSS in the component, so not preloading here to keep minimal -->
+    <meta name="description" content="Recipe Explorer Frontend" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>

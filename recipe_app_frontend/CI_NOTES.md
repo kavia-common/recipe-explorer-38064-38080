@@ -3,8 +3,8 @@
 This project uses Create React App (CRA) and includes routing for a Sign In screen that depends on static assets served from `public/assets`.
 
 What to run in CI to avoid exit code 137 (OOM):
-- Prefer static serving instead of the webpack dev server.
-- Recommended: `npm run start:ci` (this runs a production build and serves the result with `serve`).
+- Use static serving instead of the webpack dev server.
+- Recommended: `npm run start:ci` (runs a production build and serves it via `serve` on `0.0.0.0:${REACT_APP_PORT:-3000}`).
 - Alternative: `npm run build && npm run serve`.
 
 Why:
@@ -15,7 +15,7 @@ Health/Liveness:
 - If you only need to verify the container is up without building assets, run `npm run healthcheck`. It starts a tiny HTTP server on `REACT_APP_PORT` (default 3000) and responds with "ok".
 
 Public assets and routing:
-- CRA requires `public/index.html` with a `#root` element. This file is present.
+- CRA requires `public/index.html` with a `#root` element. This file is present under `public/index.html`.
 - Figma-derived assets (CSS and images) are served from `/assets/...` and must reside in `public/assets`.
   - Already copied:
     - `public/assets/common.css`
@@ -25,7 +25,7 @@ Public assets and routing:
 
 Environment variables:
 - `REACT_APP_PORT` (optional; defaults to 3000)
-- Other `REACT_APP_*` variables are not required for UI startup; they can be provided via `.env` if needed.
+- Other `REACT_APP_*` variables are not required for UI startup; they can be provided via `.env` if needed. See `.env.example`.
 
 Tests:
 - Tests assert the landing copy: "Recipe Explorer frontend is running".
