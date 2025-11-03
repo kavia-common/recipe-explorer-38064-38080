@@ -1,0 +1,1 @@
+# Directory placeholder to ensure the figmaimages directory exists. Actual images are expected to be copied by prior asset pipeline; if not, CI provides them under /assets.

@@ -13,6 +13,7 @@
   "scripts": {
     "start": "cross-env HOST=0.0.0.0 PORT=${REACT_APP_PORT:-3000} BROWSER=none react-scripts start",
     "start:ci": "cross-env CI=true HOST=0.0.0.0 PORT=${REACT_APP_PORT:-3000} BROWSER=none react-scripts start",
+    "start:static": "cross-env CI=true REACT_APP_PORT=${REACT_APP_PORT:-3000} npm run build && npm run serve",
     "build": "cross-env CI=true react-scripts build",
     "serve": "serve -s build -l ${REACT_APP_PORT:-3000}",
     "test": "cross-env CI=true react-scripts test --watchAll=false",
