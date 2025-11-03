@@ -16,10 +16,11 @@
     "start:static": "cross-env CI=true REACT_APP_PORT=${REACT_APP_PORT:-3000} npm run build && npm run serve",
     "build": "cross-env CI=true GENERATE_SOURCEMAP=${REACT_APP_ENABLE_SOURCE_MAPS:-false} react-scripts build",
     "serve": "serve -s build -l tcp://0.0.0.0:${REACT_APP_PORT:-3000}",
-    "healthcheck": "node -e \"require('http').createServer((req,res)=>{res.end('ok')}).listen(process.env.REACT_APP_PORT||3000,'0.0.0.0')\"",
+    "healthcheck": "node scripts/health-server.js",
     "test": "cross-env CI=true react-scripts test --watchAll=false",
     "eject": "react-scripts eject",
-    "prepare": "npx --yes update-browserslist-db@latest || true"
+    "prepare": "npx --yes update-browserslist-db@latest || true",
+    "postinstall": "npx --yes update-browserslist-db@latest || true"
   },
   "eslintConfig": {
     "extends": "react-app"

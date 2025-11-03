@@ -1,12 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- PUBLIC_INTERFACE -->
+    <!--
+      index.html - Root HTML for the React application.
+      Provides #root mount point for ReactDOM and basic metadata.
+      Do not include heavy scripts; CRA injects the bundles at build time.
+    -->
     <meta charset="utf-8" />
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
+    <meta name="theme-color" content="#2563EB" />
+    <meta name="description" content="Recipe Explorer frontend" />
     <title>Recipe Explorer</title>
-    <!-- Assets for Sign In screen will be injected by the SignIn11235 component; also available at /assets/... -->
+    <!-- Optional: place app-wide static assets under /public/assets and reference as /assets/... -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
